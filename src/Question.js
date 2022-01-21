@@ -1,10 +1,15 @@
 import React, { Component } from "react";
-
+import './Question.css'
 export default class Question extends Component {
     constructor() {
         super();
         this.state = {
             quiz: [
+                {
+                    question: "Where were the IAAF World Indoor Championships first held?",
+                    choices: ["Paris", " Amsterdam"],
+                    answer: "Paris"
+                },
                 {
                     question: "what is the capital city of Kenya?",
                     choices: ["Nairobi", "Kisumu"],
@@ -19,6 +24,16 @@ export default class Question extends Component {
                     question: "what is the name of a female dog?",
                     choices: ["Bitch", "Cunt"],
                     answer: "Bitch"
+                },
+                {
+                    question: "A game called ” Mokshapat” was created by the 13th century poet saint Gyandev, It is the original version of which of the following games of today?",
+                    choices: ["Ludo", "Snakes & Ladders"],
+                    answer: "Snakes & Ladders"
+                },
+                {
+                    question: "Rovers Cup is related to which of the following sports?",
+                    choices: ["Tennis", "Football"],
+                    answer: "Football"
                 },
                 {
                     question: "What election year did president Trump lose to Biden?",
@@ -38,12 +53,12 @@ export default class Question extends Component {
         let currentChoice1 = quiz[index].choices[0];
         let currentChoice2 = quiz[index].choices[1];
         let btn1 = (
-            <button value={currentChoice1} onClick={this.validateAnswer}>
+            <button className="btn" value={currentChoice1} onClick={this.validateAnswer}>
                 {currentChoice1}
             </button>
         );
         let btn2 = (
-            <button value={currentChoice2} onClick={this.validateAnswer}>
+            <button className="btn" value={currentChoice2} onClick={this.validateAnswer}>
                 {currentChoice2}
             </button>
         );
@@ -54,7 +69,7 @@ export default class Question extends Component {
 
                 {btn1}
 
-                <div>or</div>
+                <div><b>or</b></div>
 
                 {btn2}
 
@@ -68,13 +83,13 @@ export default class Question extends Component {
         let index = this.state.currentQuestionIndex;
         if (e.target.value === this.state.quiz[index].answer) {
             this.setState({
-                score: this.state.score + 1,
+                score: this.state.score + 10,
                 currentQuestionIndex:
-                    (this.state.currentQuestionIndex + 1) % this.state.quiz.length
+                    (this.state.currentQuestionIndex + 10) % this.state.quiz.length
 
             });
         } else {
-            this.setState({ score: this.state.score - 1 });
+            this.setState({ score: this.state.score - 10 });
         }
     };
 
