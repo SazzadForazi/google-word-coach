@@ -43,6 +43,7 @@ export default class Question extends Component {
             ],
             score: 0,
             currentQuestionIndex: 0
+
         };
     }
 
