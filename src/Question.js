@@ -54,19 +54,19 @@ export default class Question extends Component {
         let currentChoice1 = quiz[index].choices[0];
         let currentChoice2 = quiz[index].choices[1];
         let btn1 = (
-            <button className="btn" value={currentChoice1} onClick={this.validateAnswer}>
+            <button className="btn gradient-button gradient-button-3" value={currentChoice1} onClick={this.validateAnswer}>
                 {currentChoice1}
             </button>
         );
         let btn2 = (
-            <button className="btn" value={currentChoice2} onClick={this.validateAnswer}>
+            <button className="btn gradient-button gradient-button-3" value={currentChoice2} onClick={this.validateAnswer}>
                 {currentChoice2}
             </button>
         );
 
         return (
-            <div className="question">
-                <div>{currentQuestion}</div>
+            <div className="question" id="myDIV">
+                <div onclick="myFunction()">{currentQuestion}</div>
 
                 {btn1}
 
@@ -84,14 +84,21 @@ export default class Question extends Component {
         let index = this.state.currentQuestionIndex;
         if (e.target.value === this.state.quiz[index].answer) {
             this.setState({
+
                 score: this.state.score + 10,
                 currentQuestionIndex:
                     (this.state.currentQuestionIndex + 10) % this.state.quiz.length
 
             });
+            document.getElementById("myDIV").style.color = "green";
+            // document.getElementsByClassNames("btn").style.background = "green";
         } else {
             this.setState({ score: this.state.score - 10 });
+            document.getElementById("myDIV").style.color = "red";
+            alert(document.body.style.innerHTML = "Opps!! Incorrect Answer");
+
         }
+        e.preventDefault();
     };
 
     render() {

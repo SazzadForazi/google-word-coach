@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
 const LoadQuiz = () => {
-    const [users, setUsers] = useState([]);
+    // const quiz = this.props.users;
+    const [users, setUsers] = useState({});
     useEffect(() => {
         fetch("http://localhost:5000/question")
             .then(res => res.json())
@@ -17,3 +18,10 @@ const LoadQuiz = () => {
 };
 
 export default LoadQuiz;
+
+
+// <ul>
+// {
+//     users.map(user => ({ user?.quiz}))
+// }
+// </ul>

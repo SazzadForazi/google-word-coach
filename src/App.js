@@ -7,11 +7,9 @@ function App() {
       <Container />
 
     </div>
-
-    // <LoadQuiz />
-
-
   );
 }
 
 export default App;
+// <LoadQuiz />
+
