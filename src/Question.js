@@ -73,8 +73,8 @@ export default class Question extends Component {
                 <div><b>or</b></div>
 
                 {btn2}
-
-                <p>Score : {this.state.score}</p>
+                <br />
+                <p className="gradient-button gradient-button-1" >Score : {this.state.score}</p>
             </div>
         );
     };

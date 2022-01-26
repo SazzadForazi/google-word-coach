@@ -7,6 +7,7 @@
     margin-top: 5px;
     color: white;
 } */
+
 .gradient-button {
     margin: 10px;
     font-family: "Arial Black", Gadget, sans-serif;
@@ -26,5 +27,11 @@
     display: inline-block;
     border-radius: 25px;
 }
+.gradient-button:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 8px 10px 12px;
+}
+.gradient-button-1 {background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)}
+.gradient-button-1:hover { background-position: right center; }
 .gradient-button-3 {background-image: linear-gradient(to right, #7474BF 0%, #348AC7 51%, #7474BF 100%)}
 .gradient-button-3:hover { background-position: right center; }
