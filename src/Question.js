@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './Question.css'
 export default class Question extends Component {
+
     constructor() {
         super();
         this.state = {
@@ -45,6 +46,7 @@ export default class Question extends Component {
             currentQuestionIndex: 0
 
         };
+
     }
 
     generateQuestion = () => {
@@ -53,6 +55,20 @@ export default class Question extends Component {
         let currentQuestion = quiz[index].question;
         let currentChoice1 = quiz[index].choices[0];
         let currentChoice2 = quiz[index].choices[1];
+        const handleAddUser = e => {
+            const answer1 = currentChoice1.current.value;
+            const answer2 = currentChoice2.current.value;
+            const correctAnsweris = { answer1, answer2 }
+            fetch('http://localhost:3000/quiz', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(correctAnsweris)
+            })
+                .then()
+            e.preventDefault()
+        }
         let btn1 = (
             <button className="btn gradient-button gradient-button-3" value={currentChoice1} onClick={this.validateAnswer}>
                 {currentChoice1}
