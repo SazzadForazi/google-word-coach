@@ -82,7 +82,7 @@ export default class Question extends Component {
 
         return (
             <div className="question" id="myDIV">
-                <div onclick="myFunction()">{currentQuestion}</div>
+                <div className="currentQuestion" onclick="myFunction()">{currentQuestion}</div>
 
                 {btn1}
 
@@ -106,12 +106,15 @@ export default class Question extends Component {
                     (this.state.currentQuestionIndex + 10) % this.state.quiz.length
 
             });
-            document.getElementById("myDIV").style.color = "green";
             // document.getElementsByClassNames("btn").style.background = "green";
+            document.getElementById("myDIV").style.color = "green";
+            // document.getElementById("myDIV").style.animationDelay = "5s";
+            // document.getElementById("myDIV").style.color = "green";
         } else {
             this.setState({ score: this.state.score - 10 });
             document.getElementById("myDIV").style.color = "red";
-            alert(document.body.style.innerHTML = "Opps!! Incorrect Answer");
+            // document.getElementById("myDIV").style.color.transitionDelay = ".1s";
+            // alert(document.body.style.innerHTML = "Opps!! Incorrect Answer");
 
         }
         e.preventDefault();

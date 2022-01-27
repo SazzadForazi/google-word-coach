@@ -28,7 +28,19 @@
     cursor: pointer;
     display: inline-block;
     border-radius: 25px;
+    
 }
+#myDIV{
+    /* background-color: rgba(162, 199, 126, 0.527); */
+    transition-duration: .2s;
+    transition-delay: 1s;
+}
+
+#myDIV::before {
+    content: "Your Quiz is: ";
+    /* background-color: rgba(242, 196, 248, 0.527); */
+    font-weight: bold;
+  }
 .gradient-button:hover{
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     margin: 8px 10px 12px;
@@ -38,6 +50,10 @@
 .gradient-button-3 {background-image: linear-gradient(to right, #7474BF 0%, #348AC7 51%, #7474BF 100%)}
 .gradient-button-3:hover { background-position: right center; }
 
+
+/* .myDIV{
+    transition-delay: 10s;
+} */
 /* @media only screen and (max-width: 600px) {
     .wrapper{
         width: 100%;
