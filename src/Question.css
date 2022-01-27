@@ -32,6 +32,8 @@
 }
 #myDIV{
     /* background-color: rgba(162, 199, 126, 0.527); */
+    /* color: black!important; */
+    color: black;
     transition-duration: .2s;
     transition-delay: 1s;
 }

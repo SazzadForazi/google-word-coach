@@ -1,5 +1,19 @@
 import React, { Component } from "react";
 import './Question.css'
+
+
+// function sleep(ms) {
+//     return new Promise(resolve => setTimeout(resolve, ms));
+//   }
+// async function demo() {
+
+
+
+//   await sleep(2000);
+
+
+// }
+
 export default class Question extends Component {
 
     constructor() {
@@ -82,7 +96,8 @@ export default class Question extends Component {
 
         return (
             <div className="question" id="myDIV">
-                <div className="currentQuestion" onclick="myFunction()">{currentQuestion}</div>
+                <div className="currentQuestion" onclick="myFunction()">
+                    {currentQuestion}</div>
 
                 {btn1}
 
@@ -93,26 +108,31 @@ export default class Question extends Component {
                 <p className="gradient-button gradient-button-1" >Score : {this.state.score}</p>
             </div>
         );
+
     };
 
     validateAnswer = (e) => {
 
         let index = this.state.currentQuestionIndex;
+
         if (e.target.value === this.state.quiz[index].answer) {
+
             this.setState({
 
                 score: this.state.score + 10,
                 currentQuestionIndex:
                     (this.state.currentQuestionIndex + 10) % this.state.quiz.length
-
             });
-            // document.getElementsByClassNames("btn").style.background = "green";
-            document.getElementById("myDIV").style.color = "green";
+            document.getElementById("myDIV").style.color = "black";
+
+
+            // await new Promise(resolve => setTimeout(resolve, 2000));
+            // e.preventDefault();
             // document.getElementById("myDIV").style.animationDelay = "5s";
-            // document.getElementById("myDIV").style.color = "green";
         } else {
-            this.setState({ score: this.state.score - 10 });
             document.getElementById("myDIV").style.color = "red";
+            this.setState({ score: this.state.score - 10 });
+
             // document.getElementById("myDIV").style.color.transitionDelay = ".1s";
             // alert(document.body.style.innerHTML = "Opps!! Incorrect Answer");
 
