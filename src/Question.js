@@ -86,7 +86,7 @@ export default class Question extends Component {
 
                 {btn1}
 
-                <div><b>or</b></div>
+                <div id="or"><b>or</b></div>
 
                 {btn2}
                 <br />

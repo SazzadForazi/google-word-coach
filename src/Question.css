@@ -7,7 +7,9 @@
     margin-top: 5px;
     color: white;
 } */
-
+#or{
+    color: black;
+}
 .gradient-button {
     margin: 10px;
     font-family: "Arial Black", Gadget, sans-serif;
@@ -18,7 +20,7 @@
     transition: 0.5s;
     background-size: 100% auto;
     color: #FFF;
-    box-shadow: 0 0 15px #eee;
+    box-shadow: 0 0 15px rgb(15, 8, 8);
     border-radius: 10px;
     width: 200px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -35,3 +37,11 @@
 .gradient-button-1:hover { background-position: right center; }
 .gradient-button-3 {background-image: linear-gradient(to right, #7474BF 0%, #348AC7 51%, #7474BF 100%)}
 .gradient-button-3:hover { background-position: right center; }
+
+/* @media only screen and (max-width: 600px) {
+    .wrapper{
+        width: 100%;
+        display: none;
+        background-color:none;
+    }
+} */
