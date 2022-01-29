@@ -14,6 +14,8 @@ import './Question.css'
 
 // }
 
+
+
 export default class Question extends Component {
 
     constructor() {
@@ -125,16 +127,9 @@ export default class Question extends Component {
             });
             document.getElementById("myDIV").style.color = "black";
 
-
-            // await new Promise(resolve => setTimeout(resolve, 2000));
-            // e.preventDefault();
-            // document.getElementById("myDIV").style.animationDelay = "5s";
         } else {
             document.getElementById("myDIV").style.color = "red";
             this.setState({ score: this.state.score - 10 });
-
-            // document.getElementById("myDIV").style.color.transitionDelay = ".1s";
-            // alert(document.body.style.innerHTML = "Opps!! Incorrect Answer");
 
         }
         e.preventDefault();
