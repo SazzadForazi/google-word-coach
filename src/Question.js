@@ -65,7 +65,12 @@ export default class Question extends Component {
 
     }
 
+
+
     generateQuestion = () => {
+
+
+
         let quiz = this.state.quiz;
         let index = this.state.currentQuestionIndex;
         let currentQuestion = quiz[index].question;
@@ -98,7 +103,7 @@ export default class Question extends Component {
 
         return (
             <div className="question" id="myDIV">
-                <div className="currentQuestion" onclick="myFunction()">
+                <div className="currentQuestion" id="questioncolor" onclick="myFunction()">
                     {currentQuestion}</div>
 
                 {btn1}
@@ -113,23 +118,42 @@ export default class Question extends Component {
 
     };
 
+
+
     validateAnswer = (e) => {
 
         let index = this.state.currentQuestionIndex;
-
+        let value = 10;
         if (e.target.value === this.state.quiz[index].answer) {
 
             this.setState({
 
-                score: this.state.score + 10,
+                score: this.state.score + value,
                 currentQuestionIndex:
-                    (this.state.currentQuestionIndex + 10) % this.state.quiz.length
+                    (this.state.currentQuestionIndex + value) % this.state.quiz.length
             });
-            document.getElementById("myDIV").style.color = "black";
+            // document.getElementById("myDIV").style.color = "black";
+            // console.log(this.state.score);
 
         } else {
-            document.getElementById("myDIV").style.color = "red";
-            this.setState({ score: this.state.score - 10 });
+            // document.getElementById("myDIV").style.color = "red";
+            setTimeout(() => {
+
+
+                this.setState({
+
+                    score: this.state.score - value,
+
+                    currentQuestionIndex:
+                        (this.state.currentQuestionIndex + value) % this.state.quiz.length
+
+                });
+                // document.getElementById("myDIV").style.color = "red";
+            }, 2000);
+
+            // document.getElementById("myDIV").style.color = "black";
+            // console.log(this.state.score);
+
 
         }
         e.preventDefault();
@@ -138,4 +162,6 @@ export default class Question extends Component {
     render() {
         return <div>{this.generateQuestion()}</div>;
     }
+
+
 }
