@@ -127,7 +127,6 @@ export default class Question extends Component {
         if (e.target.value === this.state.quiz[index].answer) {
             document.getElementsByTagName("body")[0].style.color = "green";
             setTimeout(() => {
-                // document.getElementsByTagName("body")[0].style.color = "black";
                 document.getElementsByTagName("body")[0].style.color = "black";
                 this.setState({
 
@@ -136,7 +135,6 @@ export default class Question extends Component {
                         (this.state.currentQuestionIndex + value) % this.state.quiz.length
                 });
 
-                // document.getElementsByTagName("body")[0].style.color = "black";
             }, 1000);
 
         } else {
