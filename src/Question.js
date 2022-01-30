@@ -125,15 +125,19 @@ export default class Question extends Component {
         let index = this.state.currentQuestionIndex;
         let value = 10;
         if (e.target.value === this.state.quiz[index].answer) {
+            document.getElementsByTagName("body")[0].style.color = "green";
+            setTimeout(() => {
+                // document.getElementsByTagName("body")[0].style.color = "black";
+                document.getElementsByTagName("body")[0].style.color = "black";
+                this.setState({
 
-            this.setState({
+                    score: this.state.score + value,
+                    currentQuestionIndex:
+                        (this.state.currentQuestionIndex + value) % this.state.quiz.length
+                });
 
-                score: this.state.score + value,
-                currentQuestionIndex:
-                    (this.state.currentQuestionIndex + value) % this.state.quiz.length
-            });
-            // document.getElementsByTagName("body")[0].style.color = "blue";
-
+                // document.getElementsByTagName("body")[0].style.color = "black";
+            }, 1000);
 
         } else {
 
@@ -151,7 +155,7 @@ export default class Question extends Component {
 
                 });
 
-            }, 2000);
+            }, 1000);
         }
         e.preventDefault();
     };

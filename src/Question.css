@@ -39,11 +39,12 @@ color: blue !important;
     /* color: black;
     transition-duration: .2s;
     transition-delay: 1s; */
+    /* color: black; */
 }
 #questioncolor{
     /* color: black; */
-    transition-duration: .2s;
-    transition-delay: 1s;
+    /* transition-duration: .2s;
+    transition-delay: 1s; */
 }
 #myDIV::before {
     content: "Your Quiz is: ";
