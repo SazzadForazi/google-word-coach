@@ -132,14 +132,16 @@ export default class Question extends Component {
                 currentQuestionIndex:
                     (this.state.currentQuestionIndex + value) % this.state.quiz.length
             });
-            // document.getElementById("myDIV").style.color = "black";
-            // console.log(this.state.score);
+            // document.getElementsByTagName("body")[0].style.color = "blue";
+
 
         } else {
-            // document.getElementById("myDIV").style.color = "red";
+
+            document.getElementsByTagName("body")[0].style.color = "red";
+
             setTimeout(() => {
 
-
+                document.getElementsByTagName("body")[0].style.color = "black";
                 this.setState({
 
                     score: this.state.score - value,
@@ -148,13 +150,8 @@ export default class Question extends Component {
                         (this.state.currentQuestionIndex + value) % this.state.quiz.length
 
                 });
-                // document.getElementById("myDIV").style.color = "red";
+
             }, 2000);
-
-            // document.getElementById("myDIV").style.color = "black";
-            // console.log(this.state.score);
-
-
         }
         e.preventDefault();
     };
