@@ -23,40 +23,28 @@ export default class Question extends Component {
         this.state = {
             quiz: [
                 {
-                    question: "Where were the IAAF World Indoor Championships first held?",
-                    choices: ["Paris", " Amsterdam"],
-                    answer: "Paris"
+                    question: "which flag in bangladesh??",
+                    choices: ["https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/800px-Flag_of_Bangladesh.svg.png", "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/255px-Flag_of_India.svg.png"],
+                    answer: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/800px-Flag_of_Bangladesh.svg.png"
                 },
                 {
-                    question: "what is the capital city of Kenya?",
-                    choices: ["Nairobi", "Kisumu"],
-                    answer: "Nairobi"
+                    question: " which flag in canada??",
+                    choices: ["https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png", " https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/255px-Flag_of_Canada_%28Pantone%29.svg.png"],
+                    answer: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/255px-Flag_of_Canada_%28Pantone%29.svg.png"
                 },
                 {
-                    question: "Who what the first president of Kenya?",
-                    choices: ["Jomo Kenyatta", "Daniel Moi"],
-                    answer: "Jomo Kenyatta"
+                    question: "which flag in argintina?",
+                    choices: ["https://www.fotw.info/images/b/bd.gif", "https://cdn.britannica.com/69/5869-004-7D75CD05/Flag-Argentina.jpg"],
+                    answer: "https://cdn.britannica.com/69/5869-004-7D75CD05/Flag-Argentina.jpg"
                 },
                 {
-                    question: "what is the name of a female dog?",
-                    choices: ["Bitch", "Cunt"],
-                    answer: "Bitch"
-                },
-                {
-                    question: "A game called ” Mokshapat” was created by the 13th century poet saint Gyandev, It is the original version of which of the following games of today?",
-                    choices: ["Ludo", "Snakes & Ladders"],
-                    answer: "Snakes & Ladders"
-                },
-                {
-                    question: "Rovers Cup is related to which of the following sports?",
-                    choices: ["Tennis", "Football"],
-                    answer: "Football"
-                },
-                {
-                    question: "What election year did president Trump lose to Biden?",
-                    choices: [2020, 2014],
-                    answer: "2020"
+                    question: "which flag in Brazil?",
+                    choices: ["https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/800px-Flag_of_Brazil.svg.png", "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53E6/2F6A/5EBE/3F5A/0752/0A28/100B/04C1/Flag_of_Uruguay.png"],
+                    answer: "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/800px-Flag_of_Brazil.svg.png"
                 }
+
+
+
             ],
             score: 0,
             currentQuestionIndex: 0
@@ -76,28 +64,32 @@ export default class Question extends Component {
         let currentQuestion = quiz[index].question;
         let currentChoice1 = quiz[index].choices[0];
         let currentChoice2 = quiz[index].choices[1];
-        const handleAddUser = e => {
-            const answer1 = currentChoice1.current.value;
-            const answer2 = currentChoice2.current.value;
-            const correctAnsweris = { answer1, answer2 }
-            fetch('http://localhost:3000/quiz', {
-                method: 'POST',
-                headers: {
-                    'content-type': 'application/json'
-                },
-                body: JSON.stringify(correctAnsweris)
-            })
-                .then()
-            e.preventDefault()
-        }
+        // const handleAddUser = e => {
+        //     const answer1 = currentChoice1.current.value;
+        //     const answer2 = currentChoice2.current.value;
+        //     const correctAnsweris = { answer1, answer2 }
+        //     fetch('http://localhost:3000/quiz', {
+        //         method: 'POST',
+        //         headers: {
+        //             'content-type': 'application/json'
+        //         },
+        //         body: JSON.stringify(correctAnsweris)
+        //     })
+        //         .then()
+        //     e.preventDefault()
+        // }
         let btn1 = (
             <button className="btn gradient-button gradient-button-3" value={currentChoice1} onClick={this.validateAnswer}>
-                {currentChoice1}
+
+                <img src={currentChoice1} className="img-fluid rounded-start" alt="..." />
             </button>
+
         );
+        // console.log(currentChoice1)
         let btn2 = (
             <button className="btn gradient-button gradient-button-3" value={currentChoice2} onClick={this.validateAnswer}>
-                {currentChoice2}
+
+                <img src={currentChoice2} className="img-fluid rounded-start" alt="..." />
             </button>
         );
 
