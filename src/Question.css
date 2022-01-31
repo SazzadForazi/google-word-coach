@@ -52,7 +52,7 @@ color: blue !important;
 }
 #myDIV::before {
     content: "Your Quiz is: ";
-    background-color: rgba(242, 196, 248, 0.527);
+    /* background-color: rgba(242, 196, 248, 0.527); */
     font-weight: bold;
     color: green;
   }
