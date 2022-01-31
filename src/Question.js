@@ -23,18 +23,18 @@ export default class Question extends Component {
         this.state = {
             quiz: [
                 {
-                    question: "which flag in bangladesh??",
+                    question: "which is the flag of bangladesh??",
                     choices: ["https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/800px-Flag_of_Bangladesh.svg.png", "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/255px-Flag_of_India.svg.png"],
                     answer: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/800px-Flag_of_Bangladesh.svg.png"
                 },
 
                 {
-                    question: "which flag in argintina?",
+                    question: "which is the flag of argintina?",
                     choices: ["https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/800px-Flag_of_Brazil.svg.png", "https://cdn.britannica.com/69/5869-004-7D75CD05/Flag-Argentina.jpg"],
                     answer: "https://cdn.britannica.com/69/5869-004-7D75CD05/Flag-Argentina.jpg"
                 },
                 {
-                    question: "which flag in italy?",
+                    question: "which is the flag of italy?",
                     choices: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/800px-Flag_of_Italy.svg.png", "https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53E6/2F6A/5EBE/3F5A/0752/0A28/100B/04C1/Flag_of_Uruguay.png"],
                     answer: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/800px-Flag_of_Italy.svg.png"
                 }

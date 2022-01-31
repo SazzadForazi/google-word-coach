@@ -8,8 +8,8 @@
     margin-left: 15%;
     margin-top: 40px;
     padding: 30px 0;
-    /* background-color: hsl(0, 9%, 98%); */
-    background-color: rgba(162, 199, 126, 0.527);
+    background-color: hsl(0, 9%, 98%);
+    /* background-color: rgba(162, 199, 126, 0.527); */
     /* cursor: pointer; */
 }
 .wrapper:hover{
