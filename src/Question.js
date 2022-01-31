@@ -34,7 +34,7 @@ export default class Question extends Component {
                 },
                 {
                     question: "which flag in argintina?",
-                    choices: ["https://www.fotw.info/images/b/bd.gif", "https://cdn.britannica.com/69/5869-004-7D75CD05/Flag-Argentina.jpg"],
+                    choices: ["https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/800px-Flag_of_Brazil.svg.png", "https://cdn.britannica.com/69/5869-004-7D75CD05/Flag-Argentina.jpg"],
                     answer: "https://cdn.britannica.com/69/5869-004-7D75CD05/Flag-Argentina.jpg"
                 },
                 {
@@ -81,7 +81,7 @@ export default class Question extends Component {
         let btn1 = (
             <button className="btn gradient-button gradient-button-3" value={currentChoice1} onClick={this.validateAnswer}>
 
-                <img src={currentChoice1} className="img-fluid rounded-start" alt="..." />
+                <img src={currentChoice1} className="img-fluid rounded-start imgStyle" alt="..." />
             </button>
 
         );
@@ -89,7 +89,7 @@ export default class Question extends Component {
         let btn2 = (
             <button className="btn gradient-button gradient-button-3" value={currentChoice2} onClick={this.validateAnswer}>
 
-                <img src={currentChoice2} className="img-fluid rounded-start" alt="..." />
+                <img src={currentChoice2} className="img-fluid rounded-start imgStyle" alt="..." />
             </button>
         );
 
